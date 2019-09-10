@@ -10,7 +10,7 @@ Im Home Assistant Web-GUI auf das Profil klicken, und dort (siehe auch: https://
 
 #### 2) Installation der Snips-App
 
-Installation der Lights + Homeassistant App aus dem Store: https://console.snips.ai/store/de/XXXXXXX
+Installation der Lights + Homeassistant App aus dem Store: https://console.snips.ai/store/de/skill_3a8pwgxAyK5
 
 #### 3) Assistant via `sam` installieren/aktualisieren
 
