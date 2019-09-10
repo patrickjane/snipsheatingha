@@ -1,0 +1,6 @@
+[global]
+hass_host=http://localhost:8123
+entity_dict=
+
+[secret]
+hass_token=
