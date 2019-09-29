@@ -63,13 +63,15 @@ class App(object):
 
         # parameters
 
-        self.mqtt_host = None
+        self.mqtt_host = "localhost:1883"
         self.mqtt_user = None
         self.mqtt_pass = None
 
         self.hass_host = None
         self.hass_token = None
-        
+
+        self.known_intents = ['s710:isHeatingOn','s710:enableHeating','s710:disableHeating','s710:setTemperature']
+
         # read config.ini
 
         try:
@@ -152,6 +154,11 @@ class App(object):
                     temperature = int(intent_message.slots.temperature.first().value)
         except:
             pass
+
+        # ignore unknown/unexpected intents
+
+        if intent_name not in self.known_intents:
+            return None
 
         self.process(hermes, intent_message, intent_name, room_id, temperature)
 
